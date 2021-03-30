@@ -30,6 +30,7 @@ RUN set -ex \
 RUN apk update && apk add python3 curl && pip3 install pyotp
 ADD run.sh /run.sh
 ADD generate.py /generate.py
+ADD nserver.py /nserver.py
 ADD 3pr.cfg /3pr.cfg
 RUN chmod +x /run.sh
 

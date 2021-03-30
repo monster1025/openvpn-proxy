@@ -5,17 +5,17 @@ user = os.getenv('USERNAME')
 password = os.getenv('PASSWORD')
 secret = os.getenv('SECRET')
 
-if user == "":
+if user == None:
 	print("USERNAME not specified")
-	os.exit(-1)
+	os._exit(-1)
 
-if password == "":
+if password == None:
 	print("PASSWORD not specified")
-	os.exit(-1)
+	os._exit(-1)
 
-if secret == "":
+if secret == None:
 	print("SECRET not specified")
-	os.exit(-1)
+	os._exit(-1)
 
 totp = pyotp.TOTP(secret)
 token = totp.now()

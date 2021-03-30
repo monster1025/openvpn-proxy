@@ -13,3 +13,8 @@ services:
     restart: always
     volumes:
       - ./openvpn/settings/conf:/etc/openvpn
+    logging:
+      driver: json-file
+      options:
+          max-size: "10m"
+          max-file: "5"
