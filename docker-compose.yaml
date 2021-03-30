@@ -1,0 +1,15 @@
+version: '2'
+services:
+  openvpn:
+    cap_add:
+      - NET_ADMIN
+    build: ./openvpn/docker
+    container_name: openvpn
+    ports:
+      - "9080:9080"
+    env_file: ./openvpn/settings/openvpn.env
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    restart: always
+    volumes:
+      - ./openvpn/settings/conf:/etc/openvpn
