@@ -5,3 +5,7 @@ Please specify your username, password and secret token in openvpn/settings/open
 
 ### Definitions 
 Openvpn configuration file must be named 'client.ovpn' in 'openvpn/settings/conf/' directory.
+
+## Running
+Place configuration in env file, add your vpn setting to 'openvpn/settings/conf', rename you vpn config to client.ovpn and run 'docker-compose up -d'
+You will get a HTTPS proxy at 9080 port.
