@@ -1,4 +1,6 @@
 # openvpn-proxy
+This tool can help you with over-private companies vpn servers.
+It can authomatically authentificate via 'password+otp pin' schema and provide proxy access to VPN network.
 
 ### Configuration
 Please specify your username, password and secret token in openvpn/settings/openvpn.env (you can use openvpn.env.sample)
