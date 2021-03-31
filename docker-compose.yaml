@@ -6,7 +6,8 @@ services:
     build: ./openvpn/docker
     container_name: openvpn
     ports:
-      - "9080:9080"
+      - "3128:3128"
+      - "1080:1080"
     env_file: ./openvpn/settings/openvpn.env
     devices:
       - "/dev/net/tun:/dev/net/tun"
