@@ -10,4 +10,4 @@ Openvpn configuration file must be named 'client.ovpn' in 'openvpn/settings/conf
 
 ## Running
 Place configuration in env file, add your vpn setting to 'openvpn/settings/conf', rename you vpn config to client.ovpn and run 'docker-compose up -d'
-You will get a HTTPS proxy at 9080 port.
+You will get a HTTPS proxy at 3128 port and SOCKS proxy on 1080.
