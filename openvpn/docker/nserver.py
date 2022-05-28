@@ -16,5 +16,9 @@ if 'nserver' in filedata:
 else:
  filedata = filedata.replace('daemon', 'daemon\nnserver {}'.format(nameserver))
 
+password = os.getenv('PROXY_PASSWORD')
+if password != None:
+  filedata = filedata.replace('auth none', 'auth strong\nusers admin:CL:{}'.format(password))
+
 with open(filename, 'w') as file:
   file.write(filedata)

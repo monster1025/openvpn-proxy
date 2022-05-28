@@ -27,7 +27,7 @@ RUN set -ex \
 	\
 	&& apk del .build-deps
 
-RUN apk update && apk add python3 curl && pip3 install pyotp
+RUN apk update && apk upgrade && apk add python3 curl && pip3 install pyotp
 ADD run.sh /run.sh
 ADD generate.py /generate.py
 ADD nserver.py /nserver.py

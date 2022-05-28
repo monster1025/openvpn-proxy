@@ -13,7 +13,7 @@ services:
       - "/dev/net/tun:/dev/net/tun"
     restart: always
     volumes:
-      - ./openvpn/settings/conf:/etc/openvpn
+      - ./openvpn/settings/conf:/etc/openvpn:ro
     logging:
       driver: json-file
       options:
